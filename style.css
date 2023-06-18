@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "Norsebold";
+    src: url("./font/Norse-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-size: normal;
+}   
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.main {
+    display: flex;
+}
+
+/* hero logo */
+.left-container {
+    background-image: url(./img/halie-west-25xggax4bSA-unsplash.jpg);
+    width: 25vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(0, 0, 0, .5);
+}
+
+img + p {
+    font: 5em "Norsebold",monospace;
+    color: gold;
+}
+
+img {
+    height: 9rem;
+}
+
+/* form */
+
+.row {
+    display: flex;
+}
+
+input, label {
+    display:block;
+}
+
+
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+/* input[type="password"]:valid, */
+input[type="tel"]:valid {
+    border: 2px solid green;
+}
+
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+/* input[type="password"]:invalid, */
+input[type="tel"]:invalid {
+    border:2px solid red;
+}
+
+/* password style */
+input[type="password"].valid {
+    border: 2px solid green;
+}
+input[type="password"].invalid {
+    border: 2px solid red;
+}
