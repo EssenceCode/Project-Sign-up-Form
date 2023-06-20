@@ -116,3 +116,30 @@ input[type="password"].valid {
 input[type="password"].invalid {
     border: 2px solid red;
 }
+.no-before::before {
+    display: none;
+}
+
+/* adding check mark */
+input + span {
+    position: absolute;
+}
+
+input + span::before {
+    position: relative;
+    right: -12rem;
+    top: -1rem;
+}
+
+input[type="text"]:invalid + span::before,
+input[type="email"]:invalid + span::before,
+input[type="tel"]:invalid + span::before {
+    content: "x";
+    color: red;
+}
+input[type="text"]:valid + span::before,
+input[type="email"]:valid + span::before,
+input[type="tel"]:valid + span::before{
+    content: "✓";
+    color: green;
+}
