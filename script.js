@@ -1,29 +1,28 @@
 const form = document.querySelector("form");
+const firstPwd = document.getElementById("pwd");
+const secondPwd = document.getElementById("error-pwd");
+const errorPwd = document.querySelector(".pwd-symbol");
 
-const pwd = document.getElementById("pwd");
-const errorPwd = document.getElementById("error-pwd")
 
 form.addEventListener("submit", (e) => {
-    if (pwd.value !== errorPwd.value) {
+    if (firstPwd.value !== secondPwd.value) {
         e.preventDefault();
     }
 })
 
-pwd.addEventListener("input",pwdError)
-errorPwd.addEventListener("input",pwdError)
-
-function pwdError () {
-    if (pwd.validity.valid) {
-        pwd.className = "valid";
+firstPwd.addEventListener("input", (e) => {
+    if (firstPwd.validity.valid) {
+        firstPwd.className = "valid";
     }
+});
+secondPwd.addEventListener("input",showError);
 
-    if (pwd.value !== errorPwd.value) {
-        // pwd.className = "invalid";
-        errorPwd.className = "invalid";
-        console.log("pwd mismatch")
+function showError() {
+    if (firstPwd.value !== secondPwd.value) {
+        secondPwd.className = "invalid";
+        errorPwd.textContent = "Password mismatch."
     } else {
-        // pwd.className = "valid";
-        errorPwd.className = "valid";
-
+        secondPwd.className = "valid";
+        errorPwd.textContent = "";
     }
 }
