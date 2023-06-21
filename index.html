@@ -28,7 +28,7 @@
 
             <form method="post">
                 <div class="row">
-                    <div class="intro">
+                    <div class="join">
                         <p>Join us</p>
                     </div>
                 </div>
@@ -40,6 +40,7 @@
                             type="text" 
                             name="first_name" 
                             class="first-name"
+                            pattern="[A-Z]{1}[a-z]{2,}"
                             placeholder=" "
                             required>
                             <span></span>
@@ -52,6 +53,7 @@
                             type="text" 
                             name="last_name" 
                             class="last-name"
+                            pattern="[A-Z]{1}[a-z]{2,}"
                             placeholder=" "
                             required>
                             <span></span>
@@ -120,7 +122,7 @@
                             
                             required
                             >
-                            <span class="pwd-symbol"></span>
+                            <span class="error"></span>
                         </label>
                     </div>
                 </div>
