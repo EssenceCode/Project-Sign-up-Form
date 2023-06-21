@@ -22,6 +22,7 @@
 body {
     display: flex;
     justify-content: center;
+    background-color: black;
 }
 
 
@@ -82,7 +83,12 @@ form {
     justify-content: space-evenly;
     min-height: 60vh;
     max-width: 50vw;
+    background: rgb(250,235,215,.5);
    
+}
+
+.intro {
+    background: rgb(250,235,215,.5);
 }
 
 .row {
@@ -90,11 +96,20 @@ form {
     gap: 50px;
 }
 
-.intro > p {
-    margin-left: 25px;
+.intro > p,
+.join > p {
+    margin: 25px;
     
     font-size: 1.5em;
     font-weight: bold;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 input[type="text"]:valid,
@@ -142,4 +157,32 @@ input[type="email"]:not(:placeholder-shown):not(:focus):valid + span::before,
 input[type="tel"]:not(:placeholder-shown):not(:focus):valid + span::before{
     content: "✓";
     color: green;
+}
+
+/* password error style */
+.error {
+    padding: 0;
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    
+}
+
+/* button */
+
+button {
+    height: 25px;
+    width: 150px;
+    margin-top: 5px;
+    border: 2px solid rgb(89, 109, 72);
+    background-color: rgb(89, 109, 72, .8);
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(89, 109, 72);
+
 }
