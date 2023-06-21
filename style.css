@@ -103,9 +103,9 @@ input[type="tel"]:valid {
     border: var(--border-valid);
 }
 
-input[type="text"]:invalid,
-input[type="email"]:invalid,
-input[type="tel"]:invalid {
+input[type="text"]:not(:placeholder-shown):not(:focus):invalid,
+input[type="email"]:not(:placeholder-shown):not(:focus):invalid,
+input[type="tel"]:not(:placeholder-shown):not(:focus):invalid {
     border:var(--border-invalid);
 }
 
@@ -131,15 +131,15 @@ input + span::before {
     top: -1rem;
 }
 
-input[type="text"]:invalid + span::before,
-input[type="email"]:invalid + span::before,
-input[type="tel"]:invalid + span::before {
+input[type="text"]:not(:placeholder-shown):not(:focus):invalid + span::before,
+input[type="email"]:not(:placeholder-shown):not(:focus):invalid + span::before,
+input[type="tel"]:not(:placeholder-shown):not(:focus):invalid + span::before {
     content: "x";
     color: red;
 }
-input[type="text"]:valid + span::before,
-input[type="email"]:valid + span::before,
-input[type="tel"]:valid + span::before{
+input[type="text"]:not(:placeholder-shown):not(:focus):valid + span::before,
+input[type="email"]:not(:placeholder-shown):not(:focus):valid + span::before,
+input[type="tel"]:not(:placeholder-shown):not(:focus):valid + span::before{
     content: "✓";
     color: green;
 }
