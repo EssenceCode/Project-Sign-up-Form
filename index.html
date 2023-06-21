@@ -29,7 +29,7 @@
             <form method="post">
                 <div class="row">
                     <div class="intro">
-                        Join us
+                        <p>Join us</p>
                     </div>
                 </div>
                 <div class="row">
@@ -40,6 +40,7 @@
                             type="text" 
                             name="first_name" 
                             class="first-name"
+                            placeholder=" "
                             required>
                             <span></span>
                         </label>
@@ -51,6 +52,7 @@
                             type="text" 
                             name="last_name" 
                             class="last-name"
+                            placeholder=" "
                             required>
                             <span></span>
                         </label>
@@ -64,6 +66,8 @@
                             type="email" 
                             name="email" 
                             class="email"
+                            placeholder=" "
+
                             required>
                             <span></span>
                         </label>
@@ -77,6 +81,8 @@
                             class="phone-number"
                             pattern="^(09|\+639).*\d{3}.*\d{3}.*\d{3}$"
                             placeholder="09-123-123-123"
+                            placeholder=" "
+
                             required>
                             <span></span>
                         </label>
@@ -93,7 +99,10 @@
                             minlength="8"
                             maxlength="25"
                             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,25}"
+                            placeholder=" "
+                           
                             required
+
                             >
                         </label>
                     </div>
@@ -107,6 +116,8 @@
                             minlength="8"
                             maxlength="25"
                             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,25}"
+                            placeholder=" "
+                            
                             required
                             >
                             <span class="pwd-symbol"></span>
