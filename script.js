@@ -15,14 +15,18 @@ firstPwd.addEventListener("input", (e) => {
         firstPwd.className = "valid";
     }
 });
-secondPwd.addEventListener("input",showError);
+secondPwd.addEventListener("input", (e) => {
+    if (secondPwd.value === firstPwd.value) {
+        secondPwd.className = "valid";
+        errorPwd.textContent = "";
+    } else {
+        showError(); 
+    }
+});
 
 function showError() {
     if (firstPwd.value !== secondPwd.value && secondPwd.value.length >= 8) {
         secondPwd.className = "invalid";
         errorPwd.textContent = "Password mismatch."
-    } else {
-        secondPwd.className = "valid";
-        errorPwd.textContent = "";
-    }
+    } 
 }
